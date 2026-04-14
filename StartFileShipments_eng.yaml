@@ -1,6 +1,6 @@
 openapi: 3.0.0
 servers:
-- description: sandbox
+- description: sandbox test test test
   url: https://api-stage.novapost.pl/v.1.0/
 - description: production
   url: https://api.novapost.com/v.1.0/
