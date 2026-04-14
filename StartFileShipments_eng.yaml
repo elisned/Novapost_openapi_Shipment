@@ -1,6 +1,6 @@
 openapi: 3.0.0
 servers:
-- description: sandbox test test test
+- description: sandbox 
   url: https://api-stage.novapost.pl/v.1.0/
 - description: production
   url: https://api.novapost.com/v.1.0/
@@ -109,7 +109,7 @@ paths:
       - JWT: []
       tags:
       - Shipments
-      description: "Create a Shipment Document. This API method is engineered to streamline the process of generating a shipping document for logistics operations through Nova Post. By submitting key data, such as the originating and destination addresses for the shipment, users can effortlessly create a document detailing the transportation of goods. This method includes optional fields for customs authorities, accommodating shipments that cross borders. The API response will provide the unique identifier of the generated document along with other relevant information.\n\n**Settlement validation rules**: </br>\nFor shipments **to or from Moldova and Ukraine**, the settlement (city) must be successfully resolved. </br>\nIf the provided city value cannot be matched to a settlement, the request will fail with the error: `validation.condition.recipient_settlement_not_defined`.\n\nAdditional requirement:\nFor shipments that require customs clearance (imports), the client invoice must be uploaded\
+      description: "Create a Shipment Document. test test test This API method is engineered to streamline the process of generating a shipping document for logistics operations through Nova Post. By submitting key data, such as the originating and destination addresses for the shipment, users can effortlessly create a document detailing the transportation of goods. This method includes optional fields for customs authorities, accommodating shipments that cross borders. The API response will provide the unique identifier of the generated document along with other relevant information.\n\n**Settlement validation rules**: </br>\nFor shipments **to or from Moldova and Ukraine**, the settlement (city) must be successfully resolved. </br>\nIf the provided city value cannot be matched to a settlement, the request will fail with the error: `validation.condition.recipient_settlement_not_defined`.\n\nAdditional requirement:\nFor shipments that require customs clearance (imports), the client invoice must be uploaded\
         \ as a file through the [POST /shipments/uploads/{id}](https://api.novapost.com/developers/index.html#post-/shipments/uploads/-id-) method (after shipment creation).</br>\n\n\U0001F539**Description of control elements:**\n\n**SCHEMA**</br>\nDisplays the full technical structure of the request or response, including field names, data types, required fields, allowed values, and validation rules.\n- **Single line description**</br>\n  A description that fits into a single line; any text that does not fit remains hidden.\n- **Multiline description**</br>\n  An expanded description that displays more than one line of text.\n\n**EXAMPLE**</br>\nShows a ready-made sample JSON with correctly formatted values to demonstrate how a valid request or response should look.\n"
       requestBody:
         description: Optional description in *Markdown*
